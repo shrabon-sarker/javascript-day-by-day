@@ -1,119 +1,78 @@
-console.log('this is a best out pur')
+// Arithetic Operatiors 
 
-/*his si a a gootd*/
-console.log("t")
+let num1 = 10;
+let num2 = 2;
 
-// this is  variables rolls 
-let currentUserAge = "somethik";
-let CurrentUserAge = "this is";
-let current_user_age = "this is "
+console.log(num1 + num2);
+console.log(num1 - num2);
+console.log(num1 * num2);
+console.log(num1 / num2);
+console.log(num1 ** num2);
 
-let price =  125;
-price = 100;
-const name = "john";
-//name="biksh"
-console.log(price, name)
+console.log(num1 % num2)
+console.log(50 % 2)
+console.log(49 % 2);
+console.log(50 % 5);
+console.log(50 % 4)
 
-// data type
-let  fullname ="biksah";
+// Assignment Operators
 
-console.log( typeof name)
-let age = 25;
-console.log(typeof age);
+let number1 = 20;
+let number2 = number1;
 
-let isMarried = true;
-console.log( typeof isMarried)
+number1 = number1 + 5;
+number1 += 5;
+number1++;
 
-let colors = undefined;
-console.log(typeof colors)
+number1 = number1 - 6;
+number1 -= 6;
+number1--;
 
-let selectedColors =  null;
-console.log(typeof selectedColors)
+ // Comparison Operators
 
+ // > < >= <= === !==
+ let price = 200;
 
- // Object
+ console.log(price > 100)
+ console.log(price >= 199)
+ console.log(price >= 201)
+ console.log(price < 300)
+ console.log(price < 150)
+ console.log(price <= 200)
+ console.log(price <= 201)
+ console.log(price === 200)
+ console.log(price !== 200)
 
- let user = {
-     name: "john",
-     age: 41,
-     hobby: 'reading'
- }
+ // Logical Operators 
 
- console.log(user)
- console.log(user.name)
- console.log(user.age)
- console.log(user.hobby)
+ // and (&&) , Or (||), not(!)
 
- console.log(user['name']);
- console.log(user['hobby'])
- console.log(user['age'])
+ let prices = 20;
 
+ // je kono and operator sob golo true return hte hbe
+ console.log(prices > 10 && prices < 225)
+ console.log(prices > 30 && prices < 225)
 
- //Array 
+ // or (||)
+ console.log(prices > 25 || prices <15)
+ console.log(prices > 15 || prices < 15)
 
- let friends = ['john', 'mary', 'smith', 'target'];
- console.log(friends)
-
- console.log(friends[1])
- console.log(friends[2])
-
- console.log(friends.length)
- console.log(friends[3].length)
-
-// function 
-
-function showMyName(name){
-    console.log(name)
-    console.log('my name is ' + name)
-}
-
-showMyName('john');
-showMyName('mary');
+  // not (!)
+ console.log(!(prices > 15))
 
 
-function cal(num1, num2) {
-    const sum = num1 + num2
-    //console.log(sum)
-    return sum;
-}
+let comPrice = 100;
+console.log(comPrice === '100');
+console.log(comPrice !== 10)
 
- const result = cal(4,7);
- console.log(result)
+console.log(comPrice == '100');
+console.log( comPrice != 100)
 
- function marketing(bus, bike) {
-     const taka = bus + bike;
-     return taka;
- }
+let a = 10;
+let b = 20;
 
- const stup = marketing(200, 36);
- console.log(stup)
+let save = 10;
+a = b
+b = save
 
- // template literals
-
- let myName = 'smith';
- console.log(`this is a name : ${myName}`)
-
- let message = `hi 
-how are you?`;
- console.log(message)
-
- const Person = {
-     name: 'bikash',
-     age : 24,
-     isMarried: true,
-     homeAddress: {
-         long: 48.36,
-         lat: 52.32
-     },
-     friends: ['john','mary', 'smith']
- }
-console.log(Person)
-console.log(Person.name)
-console.log(Person.age)
-console.log(Person.homeAddress.lat)
-console.log(Person.homeAddress.long)
-console.log(Person.friends[2])
-console.log(Person.friends.length)
-console.log(Person.friends[1].length)
-
- 
+console.log(a, b)
