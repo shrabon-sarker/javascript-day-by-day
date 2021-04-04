@@ -1,116 +1,252 @@
-// let country = "Bangladesh";
-// console.log(country)
-// console.log(country[4])
-// console.log(country.charAt(4))
-// console.log(country.length)
+// boject 
 
-// let mag = "please Repeat are the 'repeat' word";
-// console.log(mag.charAt(5))
-// console.log(mag.charCodeAt(5))
-// console.log(mag.toUpperCase())
-// console.log(mag.toLowerCase())
-// console.log(mag.includes('repeat', 13))
-// console.log(mag.startsWith('are', 14))
-// console.log(mag.endsWith('Repeat ', 14))
+// const user = {
+//     name: "shrakip all hasan",
+//     age: 25,
+//     hobbuy: 'full stack developer',
+// }
 
-// search(), ondexOf(),lastIndexOf()
+// console.log(user)
 
-// let mag = "please are repeat the 'repeat' word"; 
-// console.log(mag.search('are')) // full
-// console.log(mag.indexOf('repeat', 14)) //start  repeat' word
-// console.log(mag.lastIndexOf('are', 14)) // last please are repeat the 
+// // dot 
+// console.log(user.name);
+// console.log(user.age)
 
-// console.log(mag.search('the'));
-// console.log(mag.indexOf('repeaty', 16))
-// console.log(mag.lastIndexOf('word', 16))
+// // bracket 
 
-// ==== ==== toString(), Concat(), split() ======
+// console.log(user['hobbuy'].toUpperCase())
+// console.log(user['name'])
 
-//toString()
-// let tem = 155;
-// console.log(typeof tem.toString())
-// let m1 = "this "
-// let m2 = "is ";
-// let m3 = "your ";
-// let m4 = "name"
+// // Add 
+// user.email = "damo@gmail.com";
+// user.phone = 013655656575;
+// user.books = "English"
+// user.isMarried = true;
 
-// // concat()
-// let total = m1.concat(m1, m3, m4)
-// console.log(total)
-// tolat = m1 + m2+ m3+ m4;
-// console.log(total)
+// // Update
+
+// user.age = user.age + 20;
+// user.isMarried = false
+// user.phone = 01710000222;
+// user.books = user.books + " Learing"
+
+// // delete 
+
+// delete user.isMarried
+// delete user.phone;
+
+//====================================
+// object Methods & this keyword
+
+// const Person = {
+//     name: "mosfiuk rohoman",
+//     age: 38,
+//     isMarried: true,
+//     phone: 01720005555,
+//     friends: ['smith', 'mary'],
+//     selectedColor: null,
+//     calculateAge: function() {
+//         console.log(this)
+//         console.log(`this is a ${this.name.toUpperCase()}update age : ${this.age}`)
+//     }
+
+// }
+
+// Person.calculateAge()
+
+// //========================================
+// // Traversing Object Entries
+
+// const Person1 = {
+//     name: "mosfiuk rohoman",
+//     age: 38,
+//     isMarried: true,
+//     phone: 01720005555,
+//     friends: ['smith', 'mary'],
+//     selectedColor: null,
+//     calculateAge: function() {
+//         console.log(this)
+//         console.log(`this is a ${this.name.toUpperCase()}update age : ${this.age}`)
+//     }
+
+// }
+
+// for(let key in Person1){
+//     console.log(key, Person1[key])
+// }
+
+// // for( let val of Person1) {
+// //     console.log(val)
+// // }
+
+// console.log(Object.keys(Person1))
+// console.log(Object.values(Person1))
+
+// for(let key of Object.keys(Person1)) {
+//     console.log(key)
+// }
+
+// for( let val of Object.values(Person1)){
+//     console.log(val)
+// }
+
+// //=============================================
+ 
+// const salary = {
+//     john: 25000,
+//     smith: 30000,
+//     mary: 350000,
+//     carlos: 400000,
+//     shra: 2000000,
+//     bon: 505050,
+//     david: 32333
+// }
+
+// let sum = 0;
+
+// for(let key in salary){
+//     console.log(key, salary[key])
+//     sum += salary[key]
+// }
+
+// console.log(sum)
+
+// let plus = Object.values(salary);
+
+// for(let val of plus) {
+//     console.log(val)
+//     sum += val
+// }
+
+// console.log(`this is a total cost : ${sum}`)
+
+// // ==========================================
+// // Oject Destructuring 
+
+// const user1 = {
+//     name: 'smith',
+//     age: 25,
+//     email: "smith@gmail.com",
+//     favBooks: {
+//         name: 'normal people',
+//         author: 'sally Rppney',
+//         address: {
+//             phone: 01445245232,
+//             roadOn: 5,
+//             hous: 2,
+//             email: "damo@gmail.com"
+//         }
+
+//     }
 
 
-// // split()
-// let mag = "please are repeat the 'repeat' word"; 
-// console.log(mag.split("e", 2)) // " ", '', e (last parmiter limit kaj kre)
+// }
+// const {name, age, email, favBooks} = user1
+
+// const { name: title, author, address} = favBooks
+
+// const { phone, roadOn, hous, email: addressEmail} = address
+
+// console.log(name)
+// console.log(age)
+// console.log(email)
+// console.log(title)
+// console.log(author)
+// console.log(phone)
+// console.log(roadOn)
+// console.log(hous)
+// console.log(addressEmail)
 
 
-// ============= slice(), subStr(), subString() =========
+//=============================================
 
-// slice()
-let mag = "please are repeat the 'repeat' word."; 
-console.log(mag.slice(0, 6)) // index akare value ney
-console.log(mag.slice(5, 20))
-console.log(mag.slice(5))
-console.log(mag.slice())
-console.log(mag.slice(0))
-console.log(mag.slice(-10, -1))
+// Doctor object 
 
-// subString() 
-
-console.log(mag.substring(0,6)) // index are value ney
-// substr()
-console.log(mag.substr(0, 14)) // length akare value ney
-
-let message = '\tHe said, "It\'s a \tsunny day.\nHave  a good day.'
-console.log(message)
-
-
-let mags = "rikass";
-mags = "bikash" + " shrabon"
-console.log(mags)
-
-// replace()
-
-let str = "this is kame : bikash";
-let res = str.replace('kame', 'name')
-console.log(str)
-console.log(res)
-
-// trim()
-
-let name = "      shakip sraker     ";
-console.log(name);
-
-let rem = name.trim();
-console.log(rem)
-
-// mathch()
-
-let pro = " this si a name bikash are. shra , bikash , the name bikash";
-pro = pro.match(/bikash/g);
-console.log(pro)
+// const docObject = {
+//     name: "smith",
+//     designation: 'juabey specialist',
+//     clinic: {
+//         name: "happy care center",
+//         address: {
+//             long: 25.63,
+//             lat: 23.36
+//         }
+//     },
+//     operation: function(){
+//         console.log(`${this.name} started doing operarion`)
+//     }
+// }
 
 
 
-
-// repeat()
-let name1 = "bikash ";
-name1.repeat(6)
-console.log(name1.repeat(20))
-
-let alni = ' cat cat cat cat';
-console.log(alni.replaceAll(/cat/g, 'dog'))
-
-let n = "2545";
-console.log(parseInt(n))
-
-let mac = " this is a dom";
-console.log(mac.match(/dom/g))
-
-console.log(mac.substr(11, 3))
+// const {name, designation, clinic:{name: clinicName, address:{long, lat}}} = docObject
 
 
-let muStr = `Prograssing`;
-console.log(muStr.replaceAll("s", 'm'))
+// console.log(docObject)
+// console.log(name)
+// console.log(designation)
+// console.log(clinicName)
+// console.log(long)
+// console.log(lat)
+
+// docObject.operation()
+
+// ===============================================
+
+// cloning an Object 
+
+// const user = {
+//     name: 'smith', 
+//     age: 25,
+//     isMarried: false
+// }
+
+//const copiedUser = {};
+// copiedUser.name = user.name;
+// copiedUser.age = user.age;
+// copiedUser.isMarried = user.isMarried;
+
+// for(let key in user){
+//     //console.log(key, user[key])
+//     copiedUser[key] = user[key]
+// }
+
+//const copiedUser = {...user}
+// const copiedUser = Object.assign(user)
+// console.log(copiedUser)
+
+// ===============================================
+
+// console.log(Math.PI)
+// console.log(Math.random());
+// console.log(Math.ceil(1.2))
+// console.log(Math.floor(2.7))
+// console.log(Math.round(2.6))
+// console.log(Math.max(10,20,300, 7000, -76))
+// console.log(Math.min(10,20,300, 7000, -76))
+// console.log(Math.pow(4,36))
+
+
+//=============================
+// json 
+
+// const user = {
+//     name: 'smith', 
+//     age: 45,
+// }
+
+// const userDate = JSON.stringify(user);
+// console.log(userDate)
+
+// console.log(JSON.parse(userDate))
+
+console.log(Math.E)
+console.log(Math.abs( - 10))
+console.log(Math.acos(-0))
+console.log(Math.acos(-1))
+console.log(Math.acosh(2))
+console.log()
+console.log()
+console.log()
+
+
